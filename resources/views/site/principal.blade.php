@@ -1,5 +1,10 @@
- <ul>
-    <li><a href="{{ route('site.index') }}">Principal</a></li>
-    <li><a href="{{ route('site.sobrenos') }}">Sobre Nós</a></li>
-    <li><a href="{{ route('site.contato') }}">Contato</a></li>
-</ul>
+<!-- Reduzindo o código -->
+@extends('site.layouts.basico')
+
+<!-- Reduzindo o código -->
+@section('titulo', 'Home')
+
+<!-- Reduzindo o código -->
+@section('conteudo')
+
+@endsection

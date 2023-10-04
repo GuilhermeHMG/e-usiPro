@@ -43,6 +43,7 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
+        //String de conexão MySQL
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),

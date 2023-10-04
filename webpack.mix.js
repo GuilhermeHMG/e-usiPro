@@ -11,5 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+//mix.js('resources/js/app.js', 'public/js')
+//   .sass('resources/sass/app.scss', 'public/css');
+
+mix
+
+    .sass('node_modules/bootstrap/scss/bootstrap.scss', 'public/site/bootstrap.css')
+
+    //1º param: Onde está o arquivo? | 2º param: Para onde esse arquivo deve ir (ele PRECISA ser acessível através da web)?
+    .scripts('node_modules/jquery/dist/jquery.js', 'public/site/jquery.js')
+    .scripts('node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'public/site/bootstrap.js');
