@@ -46,7 +46,7 @@
                             <td>{{ $fornecedor->tbf_dt_contrato }}</td>
                             <td>{{ $fornecedor->tbf_obs }}</td>
                             <td>Excluir</td>
-                            <td>Alterar</td>
+                            <td><a href="{{ route('app.fornecedor.editar', $fornecedor->id) }}">Editar</a></td>
                         </tr>
                     @endforeach
                   </tbody>
