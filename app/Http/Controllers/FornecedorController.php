@@ -14,6 +14,8 @@ class FornecedorController extends Controller
 
     public function listar(Request $request)
     {
+        $msg = '';
+
         //Trazendo os registros do banco de dados de acordo com as informações vindas no request
         $fornecedores = Fornecedor::where('tbf_razao_social', 'like', '%'.$request->input('razao_social').'%')
             ->where('tbf_nome_fantasia', 'like', '%'.$request->input('nome_fantasia').'%')
@@ -22,9 +24,13 @@ class FornecedorController extends Controller
             ->where('tbf_ie', 'like', '%'.$request->input('ie').'%')
             ->where('tbf_dt_contrato', 'like', '%'.$request->input('dt_contrato').'%')
             ->where('tbf_obs', 'like', '%'.$request->input('obs').'%')
-            ->get();
+            ->paginate(10);
 
-        return view('app.fornecedor.listar', ['fornecedores' => $fornecedores]);
+        if(empty($request->input())) {
+            $msg = 'Exclusão realizada com sucesso!';
+        }
+
+        return view('app.fornecedor.listar', ['fornecedores' => $fornecedores, 'request' => $request->all(), 'msg' => $msg]);
     }
 
     public function adicionar(Request $request)
@@ -79,5 +85,12 @@ class FornecedorController extends Controller
         $fornecedor = Fornecedor::find($id);
         
         return view('app.fornecedor.adicionar', ['fornecedor' => $fornecedor, 'msg' => $msg]);
+    }
+
+    public function excluir($id)
+    {
+        Fornecedor::find($id)->delete();
+
+        return redirect()->route('app.fornecedor.listar');
     }
 }
