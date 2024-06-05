@@ -21,16 +21,16 @@
                                 <li class="nav-item">
                                     <a href="{{ route('app.fornecedor') }}" class="nav-link active" aria-current="page">Fornecedor</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{ route('app.produto') }}" class="nav-link active" aria-current="page">Produto</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="{{ route('app.sair') }}" class="nav-link active" aria-current="page">Sair</a>
                                 </li>
-                                <!--<li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="#">Link - Example</a>
-                                </li>-->
-                                <!--<li class="nav-item dropdown">
+                                </li>
+                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown - Example
                                     </a>
@@ -40,16 +40,16 @@
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="#">Example</a></li>
                                     </ul>
-                                </li>-->
-                                <!--<li class="nav-item">
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link disabled">Disabled - Example</a>
-                                </li>-->
+                                </li> --}}
                             </ul>
                         </nav>
-                        <!--<form class="d-flex" role="search">
+                        {{-- <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search - Example" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>-->
+                        </form> --}}
                     </div>
                 </div>
             </div>
