@@ -21,9 +21,9 @@
                                 <li class="nav-item">
                                     <a href="{{ route('app.fornecedor') }}" class="nav-link active" aria-current="page">Fornecedor</a>
                                 </li>
-                                {{-- <li class="nav-item">
-                                    <a href="{{ route('app.produto') }}" class="nav-link active" aria-current="page">Produto</a>
-                                </li> --}}
+                                <li class="nav-item">
+                                    <a href="{{ route('produto.index') }}" class="nav-link active" aria-current="page">Produto</a>
+                                </li>
                                 <li class="nav-item">
                                     <a href="{{ route('app.sair') }}" class="nav-link active" aria-current="page">Sair</a>
                                 </li>
