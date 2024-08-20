@@ -14,4 +14,3 @@
 docker-compose/
 # Dockerfile
 node_modules
-.vscode
