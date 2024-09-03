@@ -12,8 +12,8 @@ class Produto extends Model
         'tbpr_peso',
         'tbpr_est_min',
         'tbpr_est_max',
-        'tbpr_vend_var',
-        'tbpr_vend_at',
+        'tbpr_vlr_vend_var',
+        'tbpr_vlr_vend_at',
         'tbpr_custo',
         'id_unidade'
     ];
